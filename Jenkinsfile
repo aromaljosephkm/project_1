@@ -30,7 +30,7 @@ pipeline {
         stage('Docker container service starting') {
             steps {
                 sh """
-                    docker run -it --name mywebsite website:1
+                    docker run -d --name mywebsite5 website:1
                 """
             }
         }

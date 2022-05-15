@@ -19,7 +19,7 @@ pipeline {
         stage('Docker image creation') {
             steps {
                 sh """
-                    docker build -f Dockerfile -t website:1 .
+                    sudo docker build -f Dockerfile -t website:1 .
                 """
             }
         }
@@ -27,7 +27,7 @@ pipeline {
         stage('Docker container service starting') {
             steps {
                 sh """
-                    docker run -it --name mywebsite website:1
+                    sudo docker run -it --name mywebsite website:1
                 """
             }
         }
